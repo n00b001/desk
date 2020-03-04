@@ -1,4 +1,4 @@
-chromedriver==2.43
+#chromedriver==2.43
 severless-chrome==1.0.0-55
 selenium==3.14
 boto3==1.6.18

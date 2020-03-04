@@ -1,3 +1,5 @@
+import json
+
 from selenium import webdriver
 import os
 
@@ -22,9 +24,13 @@ chrome_options.binary_location = os.getcwd() + "/bin/headless-chromium"
 driver = webdriver.Chrome(chrome_options=chrome_options)
 
 
-def main():
-    pass
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
 
 
 if __name__ == '__main__':
-    main()
+    lambda_handler(None, None)
