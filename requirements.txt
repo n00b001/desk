@@ -1,6 +1,2 @@
-chromedriver==2.24.1
-# severless-chrome==1.0.0-55
-selenium==3.14
-boto3==1.6.18
-botocore==1.9.18
-chromedriver-installer==0.0.6
+selenium==2.53.0
+chromedriver-binary==2.37.0

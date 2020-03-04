@@ -3,6 +3,8 @@ import json
 from selenium import webdriver
 import os
 
+from webdriver_wrapper import WebDriverWrapper
+
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
@@ -21,10 +23,11 @@ chrome_options.add_argument('--disk-cache-dir=/tmp/cache-dir')
 chrome_options.add_argument('user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
 chrome_options.binary_location = os.getcwd() + "/bin/headless-chromium"
 
-driver = webdriver.Chrome(chrome_options=chrome_options)
-
+# driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = WebDriverWrapper(download_location='/tmp')
 
 def lambda_handler(event, context):
+
     driver.get("https://thomsonreuters.condecosoftware.com/")
 
     print(driver)
