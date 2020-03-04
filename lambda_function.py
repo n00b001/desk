@@ -25,6 +25,10 @@ driver = webdriver.Chrome(chrome_options=chrome_options)
 
 
 def lambda_handler(event, context):
+    driver.get("https://thomsonreuters.condecosoftware.com/")
+
+    print(driver)
+
     # TODO implement
     return {
         'statusCode': 200,
