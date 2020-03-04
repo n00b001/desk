@@ -9,3 +9,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: mariamrf/py-lambda-action@v0.0.2
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        LAMBDA_FUNCTION_NAME: ${{ secrets.AWS_DEFAULT_REGION }}
+        LAMBDA_LAYER_ARN: ${{ secrets.AWS_DEFAULT_REGION }}
